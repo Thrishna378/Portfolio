@@ -1,0 +1,231 @@
+/* ===== Skills Section ===== */
+#skills {
+    text-align: center;
+    padding: 20px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 50px;
+    padding: 20px;
+}
+
+/* Technical Skills */
+.technical-skills { 
+    width: 40%; 
+    text-align: left;
+    margin-left: 50px;
+}
+.technical-skills h3 {
+    margin-bottom: 30px;
+}
+.skill { 
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.skill span {
+    margin-bottom: 15px;
+    color: #fff;
+    font-weight: 500;
+}
+.progress-bar {
+    width: 250px;
+    height: 15px;
+    background: #0A192F; /* Dark background for bars */
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid #00ffc8;
+}
+.progress {
+    height: 100%;
+    background: linear-gradient(90deg, #00ffc8, #0077ff, #00ffc8);
+    background-size: 200% 100%;
+    border-radius: 10px;
+    animation: shimmer 2s infinite;
+}
+@keyframes fillProgress { 
+    from { width: 0%; } 
+    to { width: var(--target-width, 100%); } 
+}
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+/* Professional Skills - Circular */
+.professional-skills {
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+.skill-item { text-align: center; }
+.circle {
+    width: 100px; height: 100px;
+    border-radius: 50%;
+    border: 2px solid #00ffc8;
+    display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(90deg, #00ffc8, #0077ff, #00ffc8);
+    background-size: 200% 100%;
+    transition: transform 0.3s;
+    animation: shimmer 2s infinite;
+}
+
+.circle-skill {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skill-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+.circle::before { content: attr(data-percent) '%'; color: #fff; font-weight: bold; position: absolute; font-size: 16px; }
+.skill-label { display: block; margin-top: 10px; color: #fff; }
+
+/* Coding Platforms */
+
+.coding-platforms h2 span { color: white; }
+.platforms {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.coding-platforms {
+    padding: 20px;
+    text-align: center;
+}
+.platform-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 20px;
+    background: rgba(0,255,200,0.05); /* Darker card background */
+    border: 1px solid #00ffc8;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+.platform-link:hover { background: #00ffc8; color: #000; transform: translateY(-5px); }
+.platform-logo { width: 30px; height: 30px; }
+
+/* Center all section headings and content */
+#internships, #contact, #projects, #achievements {
+    text-align: center;
+    padding: 20px;
+}
+
+#contact h2, #contact p {
+    text-align: center;
+    margin: 10px auto;
+    display: block;
+}
+
+/* ===== Achievements Section ===== */
+.achievement-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.achievement-card {
+    background: #112240;
+    padding: 25px;
+    border-radius: 15px;
+    border-left: 4px solid #00ffc8;
+    transition: 0.3s;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(0,255,200,0.3);
+}
+
+.achievement-card h3 {
+    color: #00ffc8;
+    margin-bottom: 10px;
+}
+
+.achievement-card p {
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.achievement-card ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.achievement-card li {
+    color: #ccc;
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.achievement-card li::before {
+    content: "▸";
+    color: #00ffc8;
+    position: absolute;
+    left: 0;
+}
+/* Tools & Technologies */
+.tools-skills {
+    width: 50%;
+    overflow: hidden;
+}
+
+.tools-skills h3 {
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.tools-grid {
+    display: flex;
+    gap: 15px;
+    animation: moveTools 15s infinite linear;
+    white-space: nowrap;
+}
+
+.tool-item {
+    background: #112240;
+    padding: 15px;
+    border-radius: 10px;
+    background: transparent;
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.tool-item:hover {
+    background: #00ffc8;
+    color: #000;
+    transform: translateY(-5px);
+}
+@keyframes moveTools {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+.tool-logo {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+/* Additional Tools */\n.additional-tools {\n    width: 30%;\n    text-align: center;\n}\n\n.additional-tools h3 {\n    margin-bottom: 20px;\n    color: #fff;\n}\n\n.dev-gif {\n    width: 200px;\n    height: 150px;\n    border-radius: 10px;\n    border: 2px solid #00ffc8;\n}

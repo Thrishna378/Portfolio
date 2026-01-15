@@ -1,0 +1,304 @@
+/* ===== INTERACTIVE UI/UX ENHANCEMENTS ===== */
+
+/* Smooth Hover Effects for Navigation */
+nav ul li a {
+    position: relative;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #64FFDA;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+nav ul li a:hover::after {
+    width: 80%;
+}
+
+nav ul li a:hover {
+    background: rgba(100, 255, 218, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Profile Picture Hover Effect */
+.profile-pic {
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 0 25px #64FFDA, 0 0 50px #52d4b1, 0 0 75px #64FFDA;
+}
+
+/* Platform Links Interactive Hover */
+.platform-link {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: rgba(100, 255, 218, 0.05);
+    border: 2px solid transparent;
+}
+
+.platform-link::before {
+    content: '';
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(100, 255, 218, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.platform-link:hover::before {
+    left: 100%;
+}
+
+.platform-link:hover {
+    border-color: #64FFDA;
+    transform: translateX(10px);
+    box-shadow: 0 5px 15px rgba(100, 255, 218, 0.3);
+}
+
+.platform-logo {
+    transition: transform 0.3s ease;
+}
+
+.platform-link:hover .platform-logo {
+    transform: rotate(360deg) scale(1.2);
+}
+
+/* Progress Bar Animation */
+.progress {
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.progress::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.skill:hover .progress {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+}
+
+/* Professional Skills Circle Hover */
+.circle {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: linear-gradient(135deg, rgba(100, 255, 218, 0.1), rgba(82, 212, 177, 0.1));
+}
+
+.circle:hover {
+    transform: scale(1.15);
+    border-color: #64FFDA;
+    box-shadow: 0 0 20px rgba(100, 255, 218, 0.6);
+}
+
+/* Project Card Interactive Effects */
+.project-card {
+    transition: all 0.4s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 0;
+    background: linear-gradient(180deg, #64FFDA, #7f5af0);
+    transition: height 0.4s ease;
+}
+
+.project-card:hover::before {
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(127, 90, 240, 0.3);
+    background-color: #fff;
+}
+
+.project-image {
+    transition: all 0.4s ease;
+    filter: grayscale(30%);
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+/* Form Input Interactive Effects */
+form input, form textarea {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    border-color: #64FFDA;
+    box-shadow: 0 0 15px rgba(100, 255, 218, 0.4);
+    transform: scale(1.02);
+}
+
+form input:hover, form textarea:hover {
+    border-color: #52d4b1;
+}
+
+/* Button Ripple Effect */
+button {
+    position: relative;
+    overflow: hidden;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+button:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Contact Links Hover */
+#contact a {
+    position: relative;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#contact a:hover {
+    background: rgba(100, 255, 218, 0.1);
+    transform: translateX(5px);
+    text-shadow: 0 0 10px rgba(100, 255, 218, 0.8);
+}
+
+/* Certification List Interactive */
+.certification-list li {
+    transition: all 0.3s ease;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.certification-list li:hover {
+    background: rgba(100, 255, 218, 0.1);
+    transform: translateX(10px);
+    color: #64FFDA;
+}
+
+/* Section Divider Animation */
+.section-divider {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-divider::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #64FFDA, transparent);
+    animation: dividerSlide 3s infinite;
+}
+
+@keyframes dividerSlide {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* Scroll Reveal Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Smooth Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0A192F;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #64FFDA, #52d4b1);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #64FFDA;
+}
+
+/* Floating Animation for Headings */
+h2 {
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+h2 span {
+    color: #64FFDA;
+    text-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+}
+
+/* Glow Effect on Hover */
+.about-text h2:hover,
+.coding-platforms h2:hover,
+#skills h2:hover,
+#contact h2:hover {
+    text-shadow: 0 0 20px #64FFDA, 0 0 40px #52d4b1;
+}

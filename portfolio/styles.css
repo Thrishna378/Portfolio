@@ -1,0 +1,379 @@
+/* ===== General Styling ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0A192F, #112240);
+    color: #E6F1FF;
+    scroll-behavior: smooth;
+}
+
+/* ===== Navigation ===== */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(10,25,47,0.95);
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+nav ul li a {
+    color: #E6F1FF;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00ffc8;
+    transform: scale(1.1);
+}
+
+/* ===== About Section ===== */
+.about-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 30px;
+    padding: 80px 20px 20px 20px;
+}
+
+.profile-pic img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #00ffc8;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.profile-pic img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px #00ffc8;
+}
+
+.about-text h2 span {
+    color: #00ffc8;
+}
+
+/* Typing Animation for About Text */
+.about-text h5:first-child {
+    color: #ff69b4;
+    font-size: 2.5rem;
+    overflow: hidden;
+    border-right: 3px solid #ff69b4;
+    white-space: nowrap;
+    animation: typing 3s steps(8) infinite, blink-pink 1s infinite;
+    width: 8ch;
+}
+
+.about-text h5:nth-child(2) {
+    font-size: 3rem;
+    overflow: hidden;
+    border-right: 3px solid #00ffc8;
+    white-space: nowrap;
+    animation: typing2 4s steps(13) infinite, blink-cyan 1s infinite;
+    width: 13ch;
+}
+
+@keyframes typing {
+    0%, 50% { width: 0; }
+    100% { width: 8ch; }
+}
+
+@keyframes typing2 {
+    0%, 50% { width: 0; }
+    100% { width: 13ch; }
+}
+
+@keyframes blink-pink {
+    50% { border-color: transparent; }
+}
+
+@keyframes blink-cyan {
+    50% { border-color: transparent; }
+}
+
+.about-text p {
+    margin: 15px 0;
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+
+/* ===== Projects Section ===== */
+.project-card {
+    display: flex;
+    flex-direction: column;
+    background: #112240; /* Darker background */
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 900px;
+    transition: 0.3s;
+    box-shadow: 0 0 20px rgba(0,255,200,0.2);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 40px #00ffc8;
+}
+
+.project-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.project-text {
+    flex: 1;
+}
+
+.project-image {
+    width: 300px;
+    border-radius: 15px;
+    border: 2px solid #00ffc8;
+}
+
+.project-text {
+    flex: 1;
+}
+
+.project-text h3 {
+    color: #00ffc8;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.project-text p {
+    margin-bottom: 10px;
+    margin-top: 0;
+    color: #ccc;
+    line-height: 1.6;
+}
+/* ===== Certifications Section ===== */
+#certifications {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+#certifications h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #00ffc8;
+}
+
+.certification-list {
+    list-style-type: none; /* Remove bullets */
+    padding: 0;
+    display: inline-block; /* Center the list */
+    text-align: left; /* Keep text aligned left inside list */
+}
+
+.certification-list li {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    position: relative;
+}
+
+/* Optional: Add custom bullet */
+.certification-list li::before {
+    content: "✓"; /* Check mark for each certification */
+    color: #00ffc8;
+    font-weight: bold;
+    display: inline-block;
+    width: 20px;
+    margin-left: -20px;
+}
+
+
+/* ===== Contact Section ===== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: auto;
+}
+
+input, textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: #112240; /* Dark background for inputs */
+    color: #fff;
+    outline: none;
+    resize: none;
+    border: 1px solid #00ffc8;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #8f9ba8;
+}
+
+button {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: #00ffc8;
+    color: #0A192F;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0077ff;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* ===== Internships Section ===== */
+.internship-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.internship-card {
+    background: #112240;
+    padding: 25px;
+    border-radius: 15px;
+    border-left: 4px solid #00ffc8;
+    transition: 0.3s;
+}
+
+.internship-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(0,255,200,0.3);
+}
+
+.internship-card h3 {
+    color: #00ffc8;
+    margin-bottom: 5px;
+}
+
+.internship-card h4 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.duration {
+    color: #ccc;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.internship-card ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.internship-card li {
+    color: #ccc;
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.internship-card li::before {
+    content: "▸";
+    color: #00ffc8;
+    position: absolute;
+    left: 0;
+}
+
+/* ===== Achievements Section - Pink Cards ===== */
+.achievement-card:nth-child(1),
+.achievement-card:nth-child(3),
+.achievement-card:nth-child(5) {
+    border-left-color: #ff69b4;
+}
+
+.achievement-card:nth-child(1) h3,
+.achievement-card:nth-child(3) h3,
+.achievement-card:nth-child(5) h3 {
+    color: #ff69b4;
+}
+
+.achievement-card:nth-child(1):hover,
+.achievement-card:nth-child(3):hover,
+.achievement-card:nth-child(5):hover {
+    box-shadow: 0 0 30px rgba(255,105,180,0.3);
+}
+
+.achievement-card:nth-child(1) li::before,
+.achievement-card:nth-child(3) li::before,
+.achievement-card:nth-child(5) li::before {
+    color: #ff69b4;
+}
+.about-text h5:nth-child(3) {\n    font-size: 2.5rem;\n    color: #ff69b4;\n    overflow: hidden;\n    border-right: 3px solid #ff69b4;\n    white-space: nowrap;\n    animation: typing3 4s steps(15) infinite, blink-pink 1s infinite;\n    width: 15ch;\n}\n\n@keyframes typing3 {\n    0%, 50% { width: 0; }\n    100% { width: 15ch; }\n}
+.resume-section {
+    margin-top: 20px;
+}
+
+.resume-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    background: linear-gradient(135deg, #ff69b4, #8a2be2);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
+    border: none;
+}
+
+.resume-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 25px rgba(255, 105, 180, 0.5);
+}
+
+.download-icon {
+    font-size: 16px;
+}
+/* Pink Internship Cards */
+.internship-card:nth-child(1),
+.internship-card:nth-child(3) {
+    border-left-color: #ff69b4;
+}
+
+.internship-card:nth-child(1) h3,
+.internship-card:nth-child(3) h3 {
+    color: #ff69b4;
+}
+
+.internship-card:nth-child(1):hover,
+.internship-card:nth-child(3):hover {
+    box-shadow: 0 0 30px rgba(255,105,180,0.3);
+}
+
+.internship-card:nth-child(1) li::before,
+.internship-card:nth-child(3) li::before {
+    color: #ff69b4;
+}

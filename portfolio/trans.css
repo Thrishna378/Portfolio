@@ -1,0 +1,25 @@
+/* ===== Section Divider ===== */
+.section-divider {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, #00ffc8, #0077ff);
+    margin: 50px 0;
+}
+
+/* ===== Scroll & Fade Animations ===== */
+.fade-in { opacity: 0; transform: translateY(20px); animation: fadeIn 1s forwards; }
+.slide-left { opacity: 0; transform: translateX(-50px); animation: slideLeft 1s forwards; }
+.slide-right { opacity: 0; transform: translateX(50px); animation: slideRight 1s forwards; }
+.slide-up { opacity: 0; transform: translateY(50px); animation: slideUp 1s forwards; }
+
+@keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
+@keyframes slideLeft { to { opacity: 1; transform: translateX(0); } }
+@keyframes slideRight { to { opacity: 1; transform: translateX(0); } }
+@keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
+
+/* Button pulse */
+button { animation: pulse 2s infinite; }
+@keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+
+/* Card hover animation */
+.project-card:hover { transform: translateY(-10px); box-shadow: 0 0 40px #00ffc8; }
